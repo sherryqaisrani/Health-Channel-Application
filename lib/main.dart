@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:health_channel_application/screens/intro_screen.dart';
 import 'package:health_channel_application/screens/splash_screen.dart';
 import 'package:health_channel_application/themes/light_theme.dart';
 
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: SplashScreen(),
+      child: IntroScreen(),
     );
   }
 }

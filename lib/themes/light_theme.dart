@@ -48,6 +48,17 @@ final lightTheme = ThemeData.light().copyWith(
       ),
     ),
   ),
+  elevatedButtonTheme: ElevatedButtonThemeData(
+    style: ElevatedButton.styleFrom(
+      primary: aWhite,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(99.r),
+      ),
+      padding: EdgeInsets.symmetric(
+        vertical: 14.h,
+      ),
+    ),
+  ),
   colorScheme: const ColorScheme.light(
     primary: aPrimaryColor,
     background: aWhite,
