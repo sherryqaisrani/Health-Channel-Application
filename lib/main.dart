@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:health_channel_application/screens/splash_screen.dart';
+import 'package:health_channel_application/themes/light_theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,11 +19,9 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
+          themeMode: ThemeMode.system,
           title: 'Health Channel',
-          theme: ThemeData(
-            primarySwatch: Colors.blue,
-            textTheme: Typography.englishLike2018.apply(fontSizeFactor: 1.sp),
-          ),
+          theme: lightTheme,
           home: child,
         );
       },

@@ -11,7 +11,6 @@ final lightTheme = ThemeData.light().copyWith(
     const TextTheme().copyWith(
       headline1: TextStyle(
         fontSize: 48.sp,
-        fontWeight: FontWeight.bold,
         color: aBlack,
       ),
       headline2: TextStyle(
@@ -48,5 +47,9 @@ final lightTheme = ThemeData.light().copyWith(
         color: aBlack,
       ),
     ),
+  ),
+  colorScheme: const ColorScheme.light(
+    primary: aPrimaryColor,
+    background: aWhite,
   ),
 );
