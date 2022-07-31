@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:health_channel_application/screens/forget_password.dart';
 import 'package:health_channel_application/screens/intro_screen.dart';
 import 'package:health_channel_application/screens/login_screen.dart';
 import 'package:health_channel_application/screens/signup_screen.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: LoginPage(),
+      child: ForgetPassword(),
     );
   }
 }
