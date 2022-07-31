@@ -48,6 +48,12 @@ final lightTheme = ThemeData.light().copyWith(
       ),
     ),
   ),
+  inputDecorationTheme: InputDecorationTheme(
+    hintStyle: TextStyle(
+      fontSize: 12.sp,
+      color: aGrayColor,
+    ),
+  ),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       primary: aWhite,
