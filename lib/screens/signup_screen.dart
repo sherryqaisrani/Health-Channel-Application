@@ -3,7 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:health_channel_application/utils/colors.dart';
 import 'package:health_channel_application/utils/file_path.dart';
+import 'package:health_channel_application/widgets/button_widget.dart';
 import 'package:health_channel_application/widgets/custome_textfiled.dart';
+import 'package:health_channel_application/widgets/devider_container.dart';
 
 class SignUp extends StatelessWidget {
   SignUp({Key? key}) : super(key: key);
@@ -11,6 +13,9 @@ class SignUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final _userNameController = TextEditingController();
+    final _mobileNumberController = TextEditingController();
+    final _emailController = TextEditingController();
+    final _passwordController = TextEditingController();
     return Scaffold(
       body: Stack(
         children: [
@@ -49,31 +54,142 @@ class SignUp extends StatelessWidget {
               padding: EdgeInsets.symmetric(
                 horizontal: 65.w,
               ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    height: 190.h,
-                  ),
-                  Text(
-                    'Sign up',
-                    style: Theme.of(context)
-                        .textTheme
-                        .headline3!
-                        .copyWith(color: aBlack, fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    'Create an account here',
-                    style: Theme.of(context).textTheme.headline5!.copyWith(
-                          color: aGrayColor,
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      height: 160.h,
+                    ),
+                    Text(
+                      'Sign up',
+                      style: Theme.of(context)
+                          .textTheme
+                          .headline3!
+                          .copyWith(color: aBlack, fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      height: 20.h,
+                    ),
+                    Text(
+                      'Create an account here',
+                      style: Theme.of(context).textTheme.headline5!.copyWith(
+                            color: aGrayColor,
+                          ),
+                    ),
+                    SizedBox(
+                      height: 20.h,
+                    ),
+                    CustomTextField(
+                      controller: _userNameController,
+                      filePath: FilePath.person,
+                      hintText: 'UserName',
+                    ),
+                    SizedBox(
+                      height: 28.h,
+                    ),
+                    CustomTextField(
+                      controller: _mobileNumberController,
+                      filePath: FilePath.mobile,
+                      hintText: 'Mobile Number',
+                    ),
+                    SizedBox(
+                      height: 28.h,
+                    ),
+                    CustomTextField(
+                      controller: _emailController,
+                      filePath: FilePath.email,
+                      hintText: 'Email address',
+                    ),
+                    SizedBox(
+                      height: 28.h,
+                    ),
+                    CustomTextField(
+                      controller: _passwordController,
+                      filePath: FilePath.lock,
+                      hintText: 'Password',
+                      surfixPath: FilePath.eye,
+                    ),
+                    SizedBox(
+                      height: 28.h,
+                    ),
+                    Center(
+                      child: Text(
+                        'By signing up you agree with our Terms of Use',
+                        style: Theme.of(context)
+                            .textTheme
+                            .headline6!
+                            .copyWith(color: aDotColor),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 18.h,
+                    ),
+                    SizedBox(
+                      width: double.maxFinite,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          padding: EdgeInsets.symmetric(
+                            vertical: 15.h,
+                          ),
+                          primary: aPrimaryColor,
                         ),
-                  ),
-                  CustomTextField(
-                    controller: _userNameController,
-                    filePath: FilePath.person,
-                    hintText: 'UserName',
-                  ),
-                ],
+                        onPressed: () {},
+                        child: Text(
+                          'Sign UP',
+                          style:
+                              Theme.of(context).textTheme.headline3!.copyWith(
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20.h,
+                    ),
+                    DividerContainer(),
+                    SizedBox(
+                      height: 20.h,
+                    ),
+                    ButtonWidget(
+                      buttonName: 'Login with Gmail',
+                      filePath: FilePath.google,
+                    ),
+                    SizedBox(
+                      height: 20.h,
+                    ),
+                    ButtonWidget(
+                      buttonName: 'Login with Facebook',
+                      filePath: FilePath.facebook,
+                    ),
+                    SizedBox(
+                      height: 24.h,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        RichText(
+                          text: TextSpan(
+                            text: 'New Member?',
+                            style:
+                                Theme.of(context).textTheme.headline5!.copyWith(
+                                      color: aGrayColor,
+                                    ),
+                          ),
+                        ),
+                        RichText(
+                          text: TextSpan(
+                            text: 'Sign up',
+                            style:
+                                Theme.of(context).textTheme.headline5!.copyWith(
+                                      color: aPrimaryColor,
+                                    ),
+                          ),
+                        )
+                      ],
+                    )
+                  ],
+                ),
               ),
             ),
           )

@@ -7,10 +7,12 @@ class CustomTextField extends StatelessWidget {
   final TextEditingController controller;
   String filePath;
   String hintText;
+  String? surfixPath;
   CustomTextField({
     required this.controller,
     required this.filePath,
     required this.hintText,
+    this.surfixPath,
     Key? key,
   }) : super(key: key);
 
@@ -77,6 +79,9 @@ class CustomTextField extends StatelessWidget {
               ),
             ),
           ),
+          // SvgPicture.asset(
+          //   surfixPath!,
+          // ),
         ],
       ),
     );
