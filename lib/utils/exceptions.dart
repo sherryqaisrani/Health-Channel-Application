@@ -1,11 +1,7 @@
-import 'package:dio/dio.dart';
-
 //Represent Exception from Server/Remote
 
 class RemoteException implements Exception {
-  DioError dioError;
-
-  RemoteException({required this.dioError});
+  RemoteException();
 }
 
 class LocalException implements Exception {
