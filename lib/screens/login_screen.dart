@@ -1,8 +1,11 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:health_channel_application/utils/colors.dart';
 import 'package:health_channel_application/utils/file_path.dart';
+import 'package:health_channel_application/utils/routes.dart';
 import 'package:health_channel_application/widgets/button_widget.dart';
 import 'package:health_channel_application/widgets/custome_textfiled.dart';
 import 'package:health_channel_application/widgets/devider_container.dart';
@@ -98,12 +101,15 @@ class LoginPage extends StatelessWidget {
                       height: 28.h,
                     ),
                     Center(
-                      child: Text(
-                        'Forgot Password?',
-                        style: Theme.of(context)
-                            .textTheme
-                            .headline6!
-                            .copyWith(color: aDotColor),
+                      child: GestureDetector(
+                        onTap: () => Get.offNamed(Routes.getForgetPage()),
+                        child: Text(
+                          'Forgot Password?',
+                          style: Theme.of(context)
+                              .textTheme
+                              .headline6!
+                              .copyWith(color: aDotColor),
+                        ),
                       ),
                     ),
                     SizedBox(
@@ -154,6 +160,10 @@ class LoginPage extends StatelessWidget {
                       children: [
                         RichText(
                           text: TextSpan(
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () => Get.off(
+                                    Routes.getSignupPage(),
+                                  ),
                             text: 'New Member?',
                             style:
                                 Theme.of(context).textTheme.headline5!.copyWith(
@@ -163,6 +173,10 @@ class LoginPage extends StatelessWidget {
                         ),
                         RichText(
                           text: TextSpan(
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () => Get.off(
+                                    Routes.getSignupPage(),
+                                  ),
                             text: 'Sign up',
                             style:
                                 Theme.of(context).textTheme.headline5!.copyWith(

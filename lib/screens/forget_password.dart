@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:health_channel_application/utils/colors.dart';
 import 'package:health_channel_application/utils/file_path.dart';
+import 'package:health_channel_application/utils/routes.dart';
 import 'package:health_channel_application/widgets/custome_textfiled.dart';
 
 class ForgetPassword extends StatelessWidget {
@@ -30,16 +32,21 @@ class ForgetPassword extends StatelessWidget {
             left: 30,
             child: Stack(
               children: [
-                Container(
-                  height: 50.h,
-                  width: 50.h,
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).colorScheme.primary,
-                    shape: BoxShape.circle,
+                GestureDetector(
+                  onTap: () => Get.offNamed(
+                    Routes.loginPage,
                   ),
-                  child: Icon(
-                    Icons.arrow_back,
-                    color: Theme.of(context).scaffoldBackgroundColor,
+                  child: Container(
+                    height: 50.h,
+                    width: 50.h,
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).colorScheme.primary,
+                      shape: BoxShape.circle,
+                    ),
+                    child: Icon(
+                      Icons.arrow_back,
+                      color: Theme.of(context).scaffoldBackgroundColor,
+                    ),
                   ),
                 ),
               ],
