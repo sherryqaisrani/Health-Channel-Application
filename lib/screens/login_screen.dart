@@ -8,7 +8,9 @@ import 'package:health_channel_application/widgets/custome_textfiled.dart';
 import 'package:health_channel_application/widgets/devider_container.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  // final String userName;
+  // final String password;
+  LoginPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

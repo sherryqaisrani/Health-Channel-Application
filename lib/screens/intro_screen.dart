@@ -146,8 +146,7 @@ class _IntroScreenState extends State<IntroScreen> {
                             vertical: 14.h,
                           ),
                         ),
-                        onPressed: () => Navigator.pushReplacementNamed(
-                            context, RouteGenerate.login),
+                        onPressed: () {},
                         child: Text(
                           'Skip',
                           style: Theme.of(context)
