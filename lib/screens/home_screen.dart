@@ -33,6 +33,9 @@ class HomePage extends StatelessWidget {
                       ),
                 ),
               ),
+              SizedBox(
+                height: 18.h,
+              ),
               Container(
                 width: double.maxFinite,
                 height: 50.h,
@@ -134,6 +137,9 @@ class HomePage extends StatelessWidget {
                   )
                 ],
               ),
+              SizedBox(
+                height: 38.h,
+              ),
               Container(
                 height: 76.h,
                 width: 76.w,
@@ -176,6 +182,117 @@ class HomePage extends StatelessWidget {
                       ),
                     ],
                   ),
+                ),
+              ),
+              SizedBox(
+                height: 38.h,
+              ),
+              Text(
+                'Specialist',
+                style: Theme.of(context).textTheme.headline4!.copyWith(
+                      color: aWhite,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500,
+                    ),
+              ),
+              SizedBox(
+                height: 24.h,
+              ),
+              Container(
+                height: 137.h,
+                width: 381.w,
+                decoration: const BoxDecoration(
+                  color: aPrimaryColor,
+                  boxShadow: [
+                    BoxShadow(
+                      color: aWhite,
+                      offset: Offset(0, 1),
+                      blurRadius: 4,
+                    ),
+                  ],
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Image.asset(
+                      FilePath.doctorImage,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          height: 7.h,
+                        ),
+                        Text(
+                          'DR. Rathnayake',
+                          style:
+                              Theme.of(context).textTheme.headline5!.copyWith(
+                                    color: aWhite,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                        ),
+                        SizedBox(
+                          height: 7.h,
+                        ),
+                        Text(
+                          'physical specialist',
+                          style:
+                              Theme.of(context).textTheme.bodyText1!.copyWith(
+                                    color: aBlack,
+                                  ),
+                        ),
+                        SizedBox(
+                          height: 13.h,
+                        ),
+                        Text(
+                          'suwas Hospital',
+                          style:
+                              Theme.of(context).textTheme.bodyText1!.copyWith(
+                                    color: aBlack,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                        ),
+                        SizedBox(
+                          height: 9.h,
+                        ),
+                        SvgPicture.asset(
+                          FilePath.stars,
+                        ),
+                      ],
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(
+                        right: 20.w,
+                      ),
+                      child: Container(
+                        height: 62.h,
+                        width: 64.w,
+                        decoration: const BoxDecoration(
+                          color: aPrimaryColor,
+                          boxShadow: [
+                            BoxShadow(
+                              color: aWhite,
+                              offset: Offset(3.15, 3.15),
+                              blurRadius: 5.51,
+                              spreadRadius: 0,
+                            ),
+                            BoxShadow(
+                              color: aWhite,
+                              offset: Offset(-2.36, -2.36),
+                              blurRadius: 4.73,
+                              spreadRadius: 0,
+                            ),
+                          ],
+                        ),
+                        child: Center(
+                          child: SvgPicture.asset(
+                            FilePath.phone,
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
                 ),
               )
             ],
