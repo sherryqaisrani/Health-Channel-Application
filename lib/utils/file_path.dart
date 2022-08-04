@@ -1,5 +1,6 @@
 class FilePath {
   static const String introLogo = 'assets/svg/intro_logo.svg';
+  static const String homeScreenDr = 'assets/images/doctorImage.png';
   static const String introLogoPng = 'assets/images/intro_logo.png';
   static const String firstTopDesign = 'assets/svg/top_line_design.svg';
   static const String secondTopDesign = 'assets/svg/below_top_design.svg';
@@ -13,4 +14,6 @@ class FilePath {
   static const String eye = 'assets/svg/Icons/eye.svg';
   static const String email = 'assets/svg/Icons/email.svg';
   static const String arrow = 'assets/svg/Icons/arrow.svg';
+  static const String search = 'assets/svg/Icons/search.svg';
+  static const String heart = 'assets/svg/Icons/heart.svg';
 }
