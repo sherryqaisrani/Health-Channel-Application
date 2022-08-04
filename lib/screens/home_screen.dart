@@ -76,7 +76,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 50.h,
+                height: 70.h,
               ),
               Stack(
                 clipBehavior: Clip.none,
@@ -90,12 +90,18 @@ class HomePage extends StatelessWidget {
                         10.r,
                       ),
                     ),
-                    child: Text(
-                      'Healthy Channel\nWill Help you to\nImprove your\nHealth',
-                      style: Theme.of(context).textTheme.headline4!.copyWith(
-                            color: aPrimaryColor,
-                            fontWeight: FontWeight.w600,
-                          ),
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 14.w,
+                        vertical: 10,
+                      ),
+                      child: Text(
+                        'Healthy Channel\nWill Help you to\nImprove your\nHealth',
+                        style: Theme.of(context).textTheme.headline4!.copyWith(
+                              color: aPrimaryColor,
+                              fontWeight: FontWeight.w600,
+                            ),
+                      ),
                     ),
                   ),
                   Positioned(
@@ -140,47 +146,54 @@ class HomePage extends StatelessWidget {
               SizedBox(
                 height: 38.h,
               ),
-              Container(
-                height: 76.h,
-                width: 76.w,
-                decoration: const BoxDecoration(
-                  color: Colors.transparent,
-                  boxShadow: [
-                    BoxShadow(
-                      spreadRadius: 0,
-                      color: aWhite,
-                      blurRadius: 7,
-                      offset: Offset(4, 4),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: List.generate(
+                  4,
+                  (index) => Container(
+                    height: 76.h,
+                    width: 76.w,
+                    decoration: const BoxDecoration(
+                      color: Colors.transparent,
+                      boxShadow: [
+                        BoxShadow(
+                          spreadRadius: 0,
+                          color: aWhite,
+                          blurRadius: 7,
+                          offset: Offset(4, 4),
+                        ),
+                        BoxShadow(
+                          spreadRadius: 0,
+                          blurRadius: 0,
+                          color: aPrimaryColor,
+                          offset: Offset(-4, -4),
+                        ),
+                      ],
                     ),
-                    BoxShadow(
-                      spreadRadius: 0,
-                      blurRadius: 0,
-                      color: aPrimaryColor,
-                      offset: Offset(-4, -4),
+                    child: Container(
+                      decoration: const BoxDecoration(
+                        color: aPrimaryColor,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SvgPicture.asset(
+                            FilePath.heart,
+                          ),
+                          SizedBox(
+                            height: 2.5.h,
+                          ),
+                          Text(
+                            'Heart',
+                            style:
+                                Theme.of(context).textTheme.bodyText2!.copyWith(
+                                      color: aWhite,
+                                    ),
+                          ),
+                        ],
+                      ),
                     ),
-                  ],
-                ),
-                child: Container(
-                  decoration: const BoxDecoration(
-                    color: aPrimaryColor,
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SvgPicture.asset(
-                        FilePath.heart,
-                      ),
-                      SizedBox(
-                        height: 2.5.h,
-                      ),
-                      Text(
-                        'Heart',
-                        style: Theme.of(context).textTheme.bodyText2!.copyWith(
-                              color: aWhite,
-                            ),
-                      ),
-                    ],
                   ),
                 ),
               ),
