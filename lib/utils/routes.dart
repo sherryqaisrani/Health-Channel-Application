@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:health_channel_application/screens/confirmation_screen.dart';
 import 'package:health_channel_application/screens/forget_password.dart';
 import 'package:health_channel_application/screens/home_screen.dart';
+import 'package:health_channel_application/screens/intro_screen.dart';
 import 'package:health_channel_application/screens/login_screen.dart';
 import 'package:health_channel_application/screens/signup_screen.dart';
 import 'package:health_channel_application/screens/splash_screen.dart';
@@ -37,7 +38,7 @@ class Routes {
       name: initialPage,
       page: () {
         // String? name = Get.parameters['name'];
-        return SplashScreen();
+        return IntroScreen();
       },
     ),
     GetPage(

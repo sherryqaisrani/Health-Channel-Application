@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
           themeMode: ThemeMode.system,
           title: 'Health Channel',
           theme: lightTheme,
-          initialRoute: Routes.getHomePage(),
+          initialRoute: Routes.initialPage,
           // onGenerateRoute: RouteGenerate.generateRoute,
           getPages: Routes.routes,
         );

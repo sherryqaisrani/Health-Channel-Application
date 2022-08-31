@@ -2,6 +2,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:health_channel_application/utils/colors.dart';
 import 'package:health_channel_application/utils/file_path.dart';
 import 'package:health_channel_application/utils/routes.dart';
@@ -146,7 +147,7 @@ class _IntroScreenState extends State<IntroScreen> {
                             vertical: 14.h,
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () => Get.offAll(Routes.loginPage),
                         child: Text(
                           'Skip',
                           style: Theme.of(context)

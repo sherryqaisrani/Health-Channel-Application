@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:health_channel_application/screens/home_screen.dart';
 import 'package:health_channel_application/utils/colors.dart';
 import 'package:health_channel_application/utils/file_path.dart';
 import 'package:health_channel_application/utils/routes.dart';
@@ -124,9 +125,11 @@ class LoginPage extends StatelessWidget {
                           ),
                           primary: aPrimaryColor,
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.to(HomePage());
+                        },
                         child: Text(
-                          'Sign UP',
+                          'Login UP',
                           style:
                               Theme.of(context).textTheme.headline3!.copyWith(
                                     fontWeight: FontWeight.w500,
